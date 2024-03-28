@@ -1,0 +1,85 @@
+Calc_layout:
+
+<Calc_layout>:
+    orientation:"vertical"
+    padding:"5dp"
+    spacing:"5dp"
+    Label:
+        text:root.display
+        size_hint:1, 0.25
+        padding: "2dp"
+        font_size:"40dp"
+        color:"green"
+        halign:"right"
+        text_size:self.width,self.height
+    Label:
+        text:root.user_input
+        size_hint:1,0.1
+        font_size:"20dp"
+        halign:"right"
+        text_size:self.width,self.height
+    GridLayout:
+        id:my_keys
+        size_hint:1,0.7
+        rows: 5
+        cols: 5
+        Button:
+            text:"1"
+            on_press:root.on_click(self)
+        Button:
+            text:"2"
+            on_press:root.on_click(self)
+        Button:
+            text:"3"
+            on_press:root.on_click(self)
+        Button:
+            text:"4"
+            on_press:root.on_click(self)
+        Button:
+            text:"+"
+            on_press:root.on_click_operation(self)
+        Button:
+            text:"5"
+            on_press:root.on_click(self)
+        Button:
+            text:"6"
+            on_press:root.on_click(self)
+        Button:
+            text:"7"
+            on_press:root.on_click(self)
+        Button:
+            text:"8"
+            on_press:root.on_click(self)
+        Button:
+            text:"-"
+            on_press:root.on_click_operation(self)
+        Button:
+            text:"9"
+            on_press:root.on_click(self)
+        Button:
+            text:"0"
+            on_press:root.on_click(self)
+        Button:
+            text:"√x"
+            on_press:root.on_click_sqrt()
+        Button:
+            text:"x²"
+            on_press:root.on_click_square()
+        Button:
+            text:"x"
+            on_press:root.on_click_operation(self)
+        Button:
+            text:"."
+            on_press:root.on_click(self)
+        Button:
+            text:"clear"
+            on_press:root.on_click_clear(self)
+        Button:
+            text:"del"
+            on_press:root.on_click_del()
+        Button:
+            text:"="
+            on_press:root.on_click_equal(self)
+        Button:
+            text:"/"
+            on_press:root.on_click_operation(self)
